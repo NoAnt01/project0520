@@ -57,16 +57,55 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. 트랙 카드 클릭 이벤트 연동 (모달 표시)
+    // 3. 트랙 카드 클릭 이벤트 연동 (특정 모달 표시)
     const trackCards = document.querySelectorAll('.track-card');
     trackCards.forEach(card => {
         card.addEventListener('click', () => {
-            const badge = card.querySelector('.track-badge').innerText;
-            const title = card.querySelector('.track-title').innerText;
-            const desc = card.querySelector('.track-desc').innerText;
+            const badge = card.querySelector('.track-badge').innerText.trim();
+            let targetModalId = '';
             
-            const detailedDesc = `${desc}\n\n[${badge} 트랙] 상세 교과목 및 연구실 정보는 학과 홈페이지 게시판을 참조하거나 지도교수님과 상담하시기 바랍니다.`;
-            openModal(title, detailedDesc);
+            if (badge.includes('AI') || badge.includes('ML')) {
+                targetModalId = 'modal-ai';
+            } else if (badge.includes('DATA')) {
+                targetModalId = 'modal-data';
+            } else if (badge.includes('SECURITY')) {
+                targetModalId = 'modal-security';
+            } else if (badge.includes('CLOUD')) {
+                targetModalId = 'modal-cloud';
+            }
+            
+            if (targetModalId) {
+                const targetModal = document.getElementById(targetModalId);
+                if (targetModal) {
+                    targetModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        });
+    });
+
+    // 트랙 모달 닫기 버튼 이벤트 연동
+    const trackModalCloseBtns = document.querySelectorAll('[data-modal-close]');
+    trackModalCloseBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = btn.getAttribute('data-modal-close');
+            const targetModal = document.getElementById(modalId);
+            if (targetModal) {
+                targetModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // 트랙 모달 바깥 영역(오버레이) 클릭 시 닫기
+    const trackModalOverlays = document.querySelectorAll('.track-modal-overlay');
+    trackModalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     });
 

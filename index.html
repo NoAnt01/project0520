@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>컴퓨터공학과 - 미래를 선도하는 기술</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/components.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">컴퓨터공학과</div>
+            <nav class="nav-menu">
+                <a href="#about">소개</a>
+                <a href="#research">핵심</a>
+                <a href="#programs">교육과정</a>
+                <a href="#admissions">진로 방향</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-primary btn-apply">Apply Now</button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- 모바일 네비게이션 -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <a href="#about">소개</a>
+            <a href="#research">핵심</a>
+            <a href="#programs">교육과정</a>
+            <a href="#admissions">진로 방향</a>
+            <button class="btn btn-primary w-full mt-4">Apply Now</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="images/main_background_img.png" alt="Hero background" />
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container relative z-10">
+                <div class="hero-content fade-in-up">
+                    <span class="badge badge-inverse">Computer Science</span>
+                    <h1 class="hero-title">세상을 변화시키는 기술,<br />미래를 선도하는 컴퓨터공학과</h1>
+                    <p class="hero-desc">
+                        디지털 시대를 이끌어갈 창의적이고 혁신적인 소프트웨어 전문가를 양성합니다.
+                        알고리즘적 사고와 첨단 기술력을 바탕으로 글로벌 리더로 성장하세요.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">
+                            입학 안내 <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                        </button>
+                        <button class="btn btn-outline btn-large">교육과정 보기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 소개 섹션 -->
+        <section class="about section-padding bg-surface" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text fade-in-left">
+                        <h2 class="section-title">디지털 혁신의 중심에서<br />미래를 설계합니다</h2>
+                        <p class="section-desc">
+                            컴퓨터공학과는 1990년 설립 이래 대한민국 ICT 산업의 발전을 이끌어왔습니다.
+                            우리는 단순한 코딩을 넘어, 복잡한 문제를 해결하고 새로운 가치를 창출하는
+                            알고리즘적 사고 능력을 배양하는 데 중점을 둡니다.
+                        </p>
+                        <p class="section-desc mt-4">
+                            인공지능, 클라우드, 사이버 보안 등 4차 산업혁명의 핵심 기술 분야에서
+                            세계적인 수준의 연구 역량을 자랑하며, 산학협력을 통해 실무에 강한 인재를 키워냅니다.
+                        </p>
+                    </div>
+                    <div class="stats-grid fade-in-right">
+                        <div class="stat-card">
+                            <div class="stat-value">95<span>%</span></div>
+                            <div class="stat-label">취업률</div>
+                        </div>
+                        <div class="stat-card mt-8">
+                            <div class="stat-value">120<span>+</span></div>
+                            <div class="stat-label">산학협력 기업</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">35<span>년</span></div>
+                            <div class="stat-label">역사와 전통</div>
+                        </div>
+                        <div class="stat-card mt-8">
+                            <div class="stat-value">Top 5</div>
+                            <div class="stat-label">국내 평가 순위</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 핵심 섹션 -->
+        <section class="strengths section-padding bg-lowest" id="research">
+            <div class="container">
+                <div class="text-center mb-16 fade-in-up">
+                    <span class="badge badge-primary block mx-auto mb-4">Why Us</span>
+                    <h2 class="section-title">컴퓨터공학과만의 핵심 경쟁력</h2>
+                </div>
+                <div class="strengths-grid">
+                    <div class="bento-card fade-in-up" style="transition-delay: 0.1s">
+                        <div class="icon-box">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <h3 class="card-title">세계적 수준의 교수진</h3>
+                        <p class="card-desc">
+                            글로벌 IT 기업 및 우수 연구기관 출신의 교수진이
+                            최신 기술 동향을 반영한 깊이 있는 이론 및 실무 교육을 제공합니다.
+                        </p>
+                    </div>
+                    <div class="bento-card fade-in-up" style="transition-delay: 0.2s">
+                        <div class="icon-box">
+                            <span class="material-symbols-outlined">dns</span>
+                        </div>
+                        <h3 class="card-title">첨단 실습 인프라</h3>
+                        <p class="card-desc">
+                            고성능 GPU 클러스터, AI 워크스테이션, 보안 실습실 등
+                            학생들이 언제든지 최적의 환경에서 연구하고 실습할 수 있는 인프라를 구축했습니다.
+                        </p>
+                    </div>
+                    <div class="bento-card fade-in-up" style="transition-delay: 0.3s">
+                        <div class="icon-box">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h3 class="card-title">산학 협력 및 취업 지원</h3>
+                        <p class="card-desc">
+                            주요 IT 기업들과의 긴밀한 네트워크를 통해 인턴십, 공동 프로젝트 등
+                            다양한 실무 경험 기회를 제공하며 체계적인 커리어 관리를 지원합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 특화 전공 섹션 -->
+        <section class="tracks section-padding bg-surface" id="programs">
+            <div class="container">
+                <div class="flex-between mb-12 fade-in-up">
+                    <div>
+                        <span class="badge badge-primary block mb-4">Programs</span>
+                        <h2 class="section-title" style="margin-bottom:0;">특화 전공 트랙</h2>
+                    </div>
+                    <a href="#" class="link-primary hidden-mobile flex-align">
+                        전체 커리큘럼 보기 <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="tracks-grid">
+                    <!-- 트랙 1 -->
+                    <div class="track-card fade-in-up" style="transition-delay: 0.1s">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCB2n4TdgTIBC9KTRB6RqUpbzJdgMg1bbNk8IefWS28lZMLuXAKWssWu-Une4BJv6DGJ2ZBygWrDnd7fqAfJcoN7B-NJ2SPP8IJfBsURFV5rXSLG_iTLFkUF6oCMpiGjJX5MqRreyS3BGcysSeq65_wV-33c6oFWgCBS1hofQVvJaxS8R3R17aUzwLfrn115d-Y3czwBvQuSSLjvOa3NA_CD0bqfQtkLCCy7qmjeBoLlk_0ANKQAJiKVxp9GnfmwctGtzNqNEOuLg"
+                            alt="AI/ML Track" class="track-img" />
+                        <div class="track-overlay"></div>
+                        <div class="track-content">
+                            <span class="track-badge">AI / ML</span>
+                            <h3 class="track-title">인공지능(AI)</h3>
+                            <p class="track-desc">
+                                머신러닝, 딥러닝, 자연어 처리 등 지능형 시스템 구축을 위한 핵심 이론과 응용 기술을 학습합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 트랙 2 -->
+                    <div class="track-card fade-in-up" style="transition-delay: 0.2s">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC06Fzf64cl1PNITHbNh_vSsJ-Ouuza5xYbRSKAU2JOYvU9rWCiJ84wbZqXNqtBERerdRgczrvlLNYtWS3xUUV-CSdpyhQBxM9ARr0Xtsk5QTPv1W4KusSrIkFioziyMsKGF0uYd7U97eD3A75jTx1hSlN_ecn0lXYCeEthsa2t5SBdR1txw_iqSlzSBLovrPyfARDop6Oa4kpyvCJ1b7UCFo5U26nJl-uReE7a-gDL3BKfztsvb1SKkQAWBtJWecvje7qg38ZNGYc"
+                            alt="Data Track" class="track-img" />
+                        <div class="track-overlay"></div>
+                        <div class="track-content">
+                            <span class="track-badge">DATA</span>
+                            <h3 class="track-title">빅데이터 분석</h3>
+                            <p class="track-desc">
+                                대규모 데이터의 수집, 처리, 분석 및 시각화를 통해 유의미한 정보를 도출하는 방법론을 연구합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 트랙 3 -->
+                    <div class="track-card fade-in-up" style="transition-delay: 0.3s">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhqouKYknTVrVaZ8cu5rgmaLe0tBQ7H7CX2FKyGU9uCy_n1kF-ftPmP7RlAp-qAT7PBfuRT2Hoir3SUGS85X-efKo_M8BTANl8R__C8yPzRap_99UYedAh5h9FwzjV8yayV9whQ6YCllflLHfWoSEXXrsy6PRYUurkcCbyePS-nTDZCw2CGc8cBLwBrozpS02EeYZavVwJSPB_X0Aa-ilBa2kOGGMdYJjWRdXUzV8bjaheDn9Bcl02cuhxTCJF7WM7BDg7LFOvMR0"
+                            alt="Security Track" class="track-img" />
+                        <div class="track-overlay"></div>
+                        <div class="track-content">
+                            <span class="track-badge">SECURITY</span>
+                            <h3 class="track-title">사이버 보안</h3>
+                            <p class="track-desc">
+                                암호학, 네트워크 보안, 시스템 해킹 방어 등 안전한 디지털 환경을 구축하기 위한 보안 기술을 배웁니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 트랙 4 -->
+                    <div class="track-card fade-in-up" style="transition-delay: 0.4s">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJMmkZAZfx8Z12Q5YVnya7vTKxSeXmH03RE0gZ9S9vkViVepmGxeM0AYIPhw-akHJDQHlIv_CIDpyZllazkUtOCgDnWaHgcDcmM8gZdgbJBqG5zgNJCkl33M7HHu5CaQzOFmgb6UAoS0VddfnlYdbTBzd1WeVrc125TjEV58Lip0s5Im-gQUT79hw2rzuDhGaxAPg6xUI5_Sc0_FJX_GumVFQBrMpww4Ixpfpfo8uuUVY98cgocP2NW-nxCRTIET86QrZ0pFlZIKw"
+                            alt="Cloud Track" class="track-img" />
+                        <div class="track-overlay"></div>
+                        <div class="track-content">
+                            <span class="track-badge">CLOUD</span>
+                            <h3 class="track-title">클라우드 컴퓨팅</h3>
+                            <p class="track-desc">
+                                분산 시스템, 컨테이너 기술, 클라우드 아키텍처 등 현대적이고 확장 가능한 인프라 설계 능력을 기릅니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 진로 방향 섹션 -->
+        <section class="careers section-padding bg-highest fade-in-up" id="admissions">
+            <div class="container text-center">
+                <span class="badge badge-primary block mx-auto mb-4">Careers</span>
+                <h2 class="section-title mb-12">다양한 진로 방향</h2>
+                <div class="career-tags">
+                    <div class="career-tag">소프트웨어 개발자 (SW Developer)</div>
+                    <div class="career-tag">인공지능 연구원 (AI Researcher)</div>
+                    <div class="career-tag">데이터 사이언티스트 (Data Scientist)</div>
+                    <div class="career-tag">보안 전문가 (Security Expert)</div>
+                    <div class="career-tag">클라우드 아키텍트 (Cloud Architect)</div>
+                    <div class="career-tag">IT 컨설턴트 (IT Consultant)</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="footer-logo">CS Department</div>
+                <p class="footer-address mt-4">
+                    서울특별시 테헤란로 123 기술대학관 4층<br />
+                    Tel: 02-123-4567<br />
+                    Email: csdept@techuniv.ac.kr
+                </p>
+            </div>
+            <div class="footer-links-wrapper">
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Give Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Institute of Technology Computer Science Department. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 모달 (Modal) -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h2 id="modal-title" class="section-title" style="margin-bottom: 16px;"></h2>
+            <p id="modal-body" class="section-desc"></p>
+        </div>
+    </div>
+</body>
+
+</html>
